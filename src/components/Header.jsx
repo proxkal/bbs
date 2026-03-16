@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import BBSLogo from './BBSLogo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,24 +18,41 @@ const Header = () => {
     };
   }, []);
 
+  // Fermer le menu mobile lors d'un changement de route ou d'un clic sur un lien d'ancrage
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const navLinks = [
+    { name: 'Galeries', path: '/galeries' },
+    { name: 'Projets', path: '/#projets', isAnchor: true },
+    { name: 'Services', path: '/#services', isAnchor: true },
+    { name: 'Partenaires', path: '/#clients', isAnchor: true },
+  ];
+
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center relative z-50">
             <BBSLogo className="scale-75 md:scale-90" />
           </Link>
 
-          {/* Navigation */}
+          {/* Navigation Desktop */}
           <nav className="hidden md:flex space-x-8">
-            <NavLink to="/galeries" className="font-medium text-oil-black hover:text-[#007A7A] transition-colors">Galeries</NavLink>
-            <a href="/#projets" className="font-medium text-oil-black hover:text-[#007A7A] transition-colors">Projets</a>
-            <a href="/#services" className="font-medium text-oil-black hover:text-[#007A7A] transition-colors">Services</a>
-            <a href="/#clients" className="font-medium text-oil-black hover:text-[#007A7A] transition-colors">Partenaires</a>
+            {navLinks.map((link) => (
+              link.isAnchor ? (
+                <a key={link.name} href={link.path} className="font-medium text-slate-900 hover:text-[#007A7A] transition-colors">{link.name}</a>
+              ) : (
+                <NavLink key={link.name} to={link.path} className="font-medium text-slate-900 hover:text-[#007A7A] transition-colors">{link.name}</NavLink>
+              )
+            ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button Desktop */}
           <div className="hidden md:block">
             <Link
               to="/contact"
@@ -42,14 +62,50 @@ const Header = () => {
             </Link>
           </div>
           
-          {/* Mobile Menu Button (placeholder) */}
-          <div className="md:hidden">
-            <button className="text-oil-black">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden relative z-50">
+            <button 
+              onClick={toggleMenu}
+              className="p-2 text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6">
+          {navLinks.map((link) => (
+            link.isAnchor ? (
+              <a 
+                key={link.name} 
+                href={link.path} 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink 
+                key={link.name} 
+                to={link.path} 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors"
+              >
+                {link.name}
+              </NavLink>
+            )
+          ))}
+          <Link
+            to="/contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="w-full text-center bg-[#007A7A] text-white font-black py-4 rounded-lg shadow-xl uppercase tracking-widest"
+          >
+            Contactez-nous
+          </Link>
         </div>
       </div>
     </header>
