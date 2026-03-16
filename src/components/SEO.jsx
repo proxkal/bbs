@@ -1,6 +1,19 @@
 import { Helmet } from 'react-helmet-async';
 
-const BASE_URL = 'https://www.bbs-services.com';
+const resolveBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_SITE_URL;
+  if (envUrl && typeof envUrl === 'string') {
+    return envUrl.replace(/\/$/, '');
+  }
+
+  if (typeof window !== 'undefined' && window.location?.origin) {
+    return window.location.origin;
+  }
+
+  return 'https://bbs-bouyedi-business-services.vercel.app';
+};
+
+const BASE_URL = resolveBaseUrl();
 const DEFAULT_OG_IMAGE = `${BASE_URL}/logo-bbs.png`;
 
 const pageMeta = {
@@ -31,13 +44,17 @@ const SEO = ({ page = 'home' }) => {
     'Bouyedi Business Services',
     'BBS Gabon',
     'Port-Gentil',
-    'logistique industrielle',
-    'conteneurs amenages',
-    'genie civil Gabon',
-    'maintenance industrielle',
-    'soudure industrielle',
-    'projets petroliers',
+    'logistique industrielle Gabon',
+    'conteneurs aménagés Port-Gentil',
+    'génie civil Gabon',
+    'maintenance pétrolière Gabon',
+    'soudure industrielle Gabon',
+    'projets pétroliers Gabon',
     'BTP Gabon',
+    'location conteneur Gabon',
+    'aménagement bureaux conteneurs',
+    'BOUYEDI Port-Gentil',
+    'BBS Services Pétroliers',
   ].join(', ');
 
   const organizationSchema = {
