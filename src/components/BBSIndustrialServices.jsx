@@ -89,7 +89,7 @@ const BBSIndustrialServices = () => {
                   <img 
                     src={s.image} 
                     alt={s.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-110 group-hover:scale-125 transition-all duration-1000"
+                    className="w-full h-full object-cover group-hover:scale-125 transition-all duration-1000"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/300?text=BBS+Workshop"; }} 
                   />
                 </div>

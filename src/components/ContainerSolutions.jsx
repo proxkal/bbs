@@ -94,7 +94,7 @@ const ContainerSolutions = () => {
               <div className="w-20 sm:w-32 border-l border-[#1a1a1a] relative overflow-hidden sm:group-hover:w-64 transition-all duration-700 ease-in-out shrink-0">
                 <img 
                   src={service.image} 
-                  className="absolute inset-0 w-full h-full object-cover grayscale-0 sm:grayscale sm:group-hover:grayscale-0 sm:group-hover:scale-110 transition-all duration-700" 
+                  className="absolute inset-0 w-full h-full object-cover sm:group-hover:scale-110 transition-all duration-700" 
                   alt={service.title} 
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#050505]/60 sm:group-hover:to-transparent transition-all"></div>
