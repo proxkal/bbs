@@ -33,7 +33,7 @@ const HeroContainerBBS = ({ onLearnMoreClick }) => {
             <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] uppercase italic mb-6">
               Location & <br/>
               <span className="text-[#007A7A]">Aménagement</span> <br/>
-              Conteneur
+              Conteneur <span className="text-3xl md:text-4xl align-middle not-italic lowercase font-light text-slate-400">au</span> <span className="text-[#007A7A]">Gabon</span>
             </h1>
 
             {/* Argumentaire BBS */}
