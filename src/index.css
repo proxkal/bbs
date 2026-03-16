@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+@theme {
+  --color-oil-black: #0f172a;
+  --color-brand-yellow: #ffd400;
+  --color-steel-white: #f8fafc;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-white text-oil-black;
+  }
+}

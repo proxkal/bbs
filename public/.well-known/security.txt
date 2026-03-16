@@ -1,0 +1,5 @@
+Contact: mailto:pascal.bouyedi@gmail.com
+Expires: 2027-03-16T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://www.bbs-services.com/.well-known/security.txt
+Policy: https://www.bbs-services.com/
