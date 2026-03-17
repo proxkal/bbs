@@ -34,13 +34,13 @@ const ClientLogos = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center justify-center p-6 md:p-8 bg-slate-50 rounded-lg md:rounded-xl border border-slate-100 hover:border-bbs-green hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                className="flex items-center justify-center p-4 md:p-6 bg-slate-50 rounded-lg md:rounded-xl border border-slate-100 hover:border-bbs-green hover:bg-white hover:shadow-lg transition-all duration-300 group"
               >
                 {client.src ? (
                   <img
                     src={client.src}
                     alt={client.name}
-                    className="h-12 sm:h-12 md:h-20 w-full object-contain transform group-hover:scale-110 transition-transform duration-300"
+                    className="h-16 sm:h-20 md:h-28 lg:h-32 w-full object-contain transform group-hover:scale-110 transition-transform duration-300"
                   />
                 ) : (
                   <span className="text-[10px] md:text-lg font-black text-slate-300 uppercase italic text-center">
