@@ -60,8 +60,8 @@ const projectGallery = [
   },
   {
     fileName: 'equipe test.jpeg',
-    title: 'Équipe Technique - Préparation',
-    description: 'Phase de préparation et de test avant intervention sur installations.',
+    title: 'Équipe Technique - Finalisation',
+    description: 'Phase de finalisation et de contrôle qualité avant livraison finale aux clients.',
   },
   {
     fileName: 'equipe-toiture.jpg',
