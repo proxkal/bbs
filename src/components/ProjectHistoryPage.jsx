@@ -4,27 +4,27 @@ import { motion } from 'framer-motion';
 
 const projectGallery = [
   {
-    fileName: 'Projet manutention cimentation sablage GOC/Projet GOC ctn SPIE - Manutention.jpg',
+    fileName: 'Projet Manutention Cimentation Sablage GOC/Projet GOC ctn SPIE - Manutention.jpg',
     title: 'Projet GOC ctn SPIE - Manutention',
     description: 'Opérations de manutention de conteneurs pour le projet GOC SPIE.',
   },
   {
-    fileName: 'Projet manutention cimentation sablage GOC/Projet manutention.jpg',
+    fileName: 'Projet Manutention Cimentation Sablage GOC/Projet manutention.jpg',
     title: 'Projet manutention',
     description: 'Déploiement des moyens de levage et manutention sur site industriel.',
   },
   {
-    fileName: 'Projet manutention cimentation sablage GOC/Projet Mud Lab M&P smp RIG 103.jpg',
+    fileName: 'Projet Manutention Cimentation Sablage GOC/Projet Mud Lab M&P smp RIG 103.jpg',
     title: 'Projet Mud Lab M&P smp RIG 103',
     description: 'Installation et aménagement du Mud Lab pour Maurel & Prom sur le RIG 103.',
   },
   {
-    fileName: 'Projet manutention cimentation sablage GOC/Projet Perenco cimentation & sablage.jpg',
+    fileName: 'Projet Manutention Cimentation Sablage GOC/Projet Perenco cimentation & sablage.jpg',
     title: 'Projet Perenco cimentation & sablage',
     description: 'Travaux techniques de cimentation et sablage pour les infrastructures Perenco.',
   },
   {
-    fileName: 'Projet manutention cimentation sablage GOC/Projet Sablage CTN Perenco cimentation.jpg',
+    fileName: 'Projet Manutention Cimentation Sablage GOC/Projet Sablage CTN Perenco cimentation.jpg',
     title: 'Projet Sablage CTN Perenco cimentation',
     description: 'Traitement de surface par sablage sur conteneurs de cimentation Perenco.',
   },
