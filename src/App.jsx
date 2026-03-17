@@ -106,15 +106,15 @@ const HomePage = ({ onLearnMoreClick }) => (
 
     <ContentWithImage
       imageLeft={true}
-      title="Expertise Industrielle & Support Technique"
-      description="BBS s'impose comme un partenaire multiservices stratégique au Gabon. Notre expertise couvre l'intégralité du cycle de vie de vos installations, de la fourniture de solutions modulaires à la maintenance critique et au support opérationnel sur site."
+      title="Expertise Industrielle & Solutions Modulaires"
+      description="BBS s'impose comme un partenaire stratégique au Gabon. Notre expertise couvre l'intégralité de la chaîne de valeur, de la fourniture de solutions modulaires sur mesure au support opérationnel industriel."
       items={[
-        'Maintenance de cuves, systèmes de distribution et étanchéité.',
-        'Travaux techniques spécialisés : Cimentation, Sablage et Peinture.',
-        'Génie Civil, BTP et construction tous corps d’état (TCE).',
-        'Manutention lourde, Levage et Logistique Onshore & Offshore.',
-        'Recrutement et mise à disposition de personnel technique qualifié.',
-        'Mise aux normes de sécurité et conformité environnementale.',
+        'Vente et Location de conteneurs neufs et d’occasion.',
+        'Aménagement et Customisation de conteneurs (Bureaux, Ateliers).',
+        'Travaux techniques : Cimentation, Sablage et Peinture industrielle.',
+        'Génie Civil et BTP industriel.',
+        'Manutention, Levage et Logistique opérationnelle.',
+        'Recrutement et mise à disposition de personnel qualifié.',
       ]}
       image="/assets/bbscontainer/travaux-soudure-interne.jpg"
     />
