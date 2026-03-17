@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bbs-bouyedi-business-services.vercel.app/sitemap.xml
+Sitemap: https://bouyediservices.com/sitemap.xml
