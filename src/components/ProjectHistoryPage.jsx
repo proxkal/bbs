@@ -132,17 +132,17 @@ const getImagePath = (fileName) => {
 
 const ProjectHistoryPage = () => {
   return (
-    <section id="galeries" className="bg-slate-950 py-10 md:py-14 relative overflow-hidden">
+    <section id="missions" className="bg-slate-950 py-10 md:py-14 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#14b8a6 1px, transparent 1px)', backgroundSize: '22px 22px' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="mb-8 border-b border-slate-800 pb-5">
           <div className="inline-flex items-center gap-2 text-[#14b8a6] text-xs font-black uppercase tracking-[0.2em] mb-3">
             <FolderKanban size={16} />
-            Galeries
+            Missions
           </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase italic text-white">
-            Historique Des Projets
+            Historique Des Missions
           </h2>
         </div>
 

@@ -29,11 +29,11 @@ const pageMeta = {
       'Contactez BOUYEDI BUSINESS SERVICES à Port-Gentil pour vos projets industriels: logistique modulaire, maintenance, génie civil et assistance technique.',
     canonical: `${BASE_URL}/contact`,
   },
-  galeries: {
-    title: 'Galeries Projets - BOUYEDI BUSINESS SERVICES',
+  missions: {
+    title: 'Missions - BOUYEDI BUSINESS SERVICES',
     description:
-      'Découvrez les réalisations BOUYEDI BUSINESS SERVICES: projets terrain, aménagement de conteneurs, maintenance et génie civil sur sites industriels au Gabon.',
-    canonical: `${BASE_URL}/galeries`,
+      'Découvrez les missions et réalisations de BOUYEDI BUSINESS SERVICES : projets terrain, aménagement de conteneurs, maintenance et génie civil au Gabon.',
+    canonical: `${BASE_URL}/missions`,
   },
 };
 

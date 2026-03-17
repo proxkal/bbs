@@ -129,16 +129,16 @@ const App = () => {
   const currentPage =
     location.pathname === '/contact'
       ? 'contact'
-      : location.pathname === '/galeries'
-        ? 'galeries'
+      : location.pathname === '/missions'
+        ? 'missions'
         : 'home';
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [location.pathname]);
 
-  const goToGaleries = () => {
-    navigate('/galeries');
+  const goToMissions = () => {
+    navigate('/missions');
   };
 
   return (
@@ -147,8 +147,8 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<HomePage onLearnMoreClick={goToGaleries} />} />
-          <Route path="/galeries" element={<ProjectHistoryPage />} />
+          <Route path="/" element={<HomePage onLearnMoreClick={goToMissions} />} />
+          <Route path="/missions" element={<ProjectHistoryPage />} />
           <Route path="/contact" element={<ContactSection />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
