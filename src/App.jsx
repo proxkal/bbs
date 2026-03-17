@@ -106,13 +106,15 @@ const HomePage = ({ onLearnMoreClick }) => (
 
     <ContentWithImage
       imageLeft={true}
-      title="Expertise en Maintenance & Services"
-      description="Au-delà des solutions modulaires, BBS assure la maintenance critique de vos infrastructures. Notre polyvalence nous permet d'intervenir sur la cimentation, le sablage, la peinture industrielle et la manutention lourde au Gabon."
+      title="Expertise Industrielle & Support Technique"
+      description="BBS s'impose comme un partenaire multiservices stratégique au Gabon. Notre expertise couvre l'intégralité du cycle de vie de vos installations, de la fourniture de solutions modulaires à la maintenance critique et au support opérationnel sur site."
       items={[
-        'Maintenance préventive des cuves et systèmes de distribution.',
-        'Travaux techniques : Cimentation, Sablage et Peinture industrielle.',
-        'Manutention et logistique opérationnelle Onshore & Offshore.',
-        'Mise aux normes environnementales et de sécurité.',
+        'Maintenance de cuves, systèmes de distribution et étanchéité.',
+        'Travaux techniques spécialisés : Cimentation, Sablage et Peinture.',
+        'Génie Civil, BTP et construction tous corps d’état (TCE).',
+        'Manutention lourde, Levage et Logistique Onshore & Offshore.',
+        'Recrutement et mise à disposition de personnel technique qualifié.',
+        'Mise aux normes de sécurité et conformité environnementale.',
       ]}
       image="/assets/bbscontainer/travaux-soudure-interne.jpg"
     />
